@@ -1,11 +1,16 @@
+
 title: "exp_dist"
+
 author: "Zankhana"
+
 date: "August 29, 2017"
+
 output:
   pdf_document: default
   html_document: default
 ---
 Over View
+
 In this project you will investigate the exponential distribution in R and compare it with the Central Limit Theorem.
 The exponential distribution can be simulated in R with rexp(n, lambda) where lambda is the rate parameter.
 The mean of exponential distribution is 1/lambda and the standard deviation is also 1/lambda. Set lambda = 0.2 for 
