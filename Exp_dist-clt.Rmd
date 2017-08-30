@@ -33,23 +33,35 @@ for (i in 1 : 1000) simMeans = c(simMeans, mean(rexp(exponentials, lambda)))
 
 mean(simMeans)
 
+[1] 5.055995
+
 THEORETICAL MEAN
 ------------------------------------------------------------------
 lambda^-1
 
+[1] 5
+
 abs(mean(simMeans)-lambda^-1)
+
+[1] 0.05599526
 
 SAMPLE VARIANCE
 ----------------------------------------------------------------------
 
 var(simMeans)
 
+[1] 0.6543703
+
 THEORETICAL VARIANCE
 -----------------------------------------------------------------------
 
 (lambda * sqrt(exponentials))^-2
 
+[1] 0.625
+
 abs(var(simMeans)-(lambda * sqrt(exponentials))^-2)
+
+[1] 0.0293703
 
 HISTORGRAM OF 1000 SIMULATIONS
 -------------------------------------------------------------------------------
