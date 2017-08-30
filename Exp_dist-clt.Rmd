@@ -13,14 +13,19 @@ all of the simulations.You will investigate the distribution of averages of 40 e
 need to do a thousand simulations.
 -------------------------------------------------------------------------------------------------------------------------
 ECHO=TRUE
+
 set.seed(1337)
+
 lambda = 0.2
+
 exponentials = 40
 
 SAMPLE MEAN VS THEORETICAL MEAN
 ----------------------
 simMeans = NULL
+
 for (i in 1 : 1000) simMeans = c(simMeans, mean(rexp(exponentials, lambda)))
+
 mean(simMeans)
 
 THEORETICAL MEAN
@@ -28,6 +33,7 @@ THEORETICAL MEAN
 lambda^-1
 
 abs(mean(simMeans)-lambda^-1)
+
 SAMPLE VARIANCE
 ----------------------------------------------------------------------
 
