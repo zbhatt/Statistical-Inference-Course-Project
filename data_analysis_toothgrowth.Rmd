@@ -19,7 +19,6 @@ ggplot(t, aes(x=factor(dose), y=len)) +
   labs(title="Guinea pig tooth length by dosage for each type of supplement", 
     x="Dose (mg/day)",
     y="Tooth Length")
-summary of the data
 
 Hypothesis #1
 The box plots seem to show, increasing the dosage increases the tooth growth. 
@@ -37,6 +36,7 @@ hypoth2<-t.test(len ~ supp, data = subset(t, dose == 0.5))
 hypoth2$conf.int
 hypoth2$p.value
 The confidence interval does not include 0 and the p-value is below the 0.05 threshold. The null hypothesis can be rejected. The alternative hypothesis is accepted.
+
 Hypothesis #3
 --------------------------------------------------------------------------------------
 For the dosage of 1 mg/day, the two supplements deliver the same tooth growth
@@ -44,6 +44,7 @@ hypoth3<-t.test(len ~ supp, data = subset(t, dose == 1))
 hypoth3$conf.int
 hypoth3$p.value
 The confidence interval does not include 0 and the p-value is smaller than the 0.05 threshold. The null hypothesis can be rejected. The alternative hypothesis that 1 mg/day dosage of orange juice delivers more tooth growth than ascorbic acid is accepted.
+
 Hypothesis #4
 ------------------------------------------------------------------------------------------------------------------------------
 For the dosage of 2 mg/day, the two supplements deliver the same tooth growth
@@ -51,10 +52,13 @@ hypoth4<-t.test(len ~ supp, data = subset(t, dose == 2))
 hypoth4$conf.int
 hypoth4$p.value
 The confidence interval does include 0 and the p-value is larger than the 0.05 threshold. The null hypothesis cannot be rejected.
+
 Conclusions & assumptions
+
 ------------------------------------------------------------------------------------------------
 Orange juice delivers more tooth growth than ascorbic acid for dosages 0.5 & 1.0. 
 Orange juice and ascorbic acid deliver the same amount of tooth growth for dose amount 2.0 mg/day. We cannot conclude orange juice is more effective that ascorbic acid.
+
 Assumptions
 ----------------------------------------------------------------------------------------------------------
 Normal distribution of the tooth lengths
